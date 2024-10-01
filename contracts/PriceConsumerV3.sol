@@ -6,11 +6,8 @@ import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 contract PriceConsumerV3 {
     AggregatorV3Interface internal priceFeed;
 
-    
     constructor(address _feedAddress) {
-        priceFeed = AggregatorV3Interface(
-            _feedAddress
-        );
+       priceFeed = AggregatorV3Interface(_feedAddress);
     }
 
     /**
@@ -31,17 +28,18 @@ contract PriceConsumerV3 {
     /**
      * This function will get the conversion rate
      */
-    function getConversionRate(uint256 etherAmount) internal view returns (uint256) {
+    function getConversionRate(
+        uint256 etherAmount
+    ) external view returns (uint256) {
         int etherPrice = getLatestPrice();
-        // (1e18 * 1e18) / 1e18
-        uint256 etherAmountInUSD = (uint256(etherPrice) * etherAmount) / 1e18;
+        uint256 etherAmountInUSD = (uint256(etherPrice) * etherAmount)/1e18;
         return etherAmountInUSD;
     }
 
     /**
      * This method will help us get the version of the AggregatorV3Interface
      */
-    function getVersion() internal view returns (uint256) {
+    function getVersion() external view returns (uint256) {
         return priceFeed.version();
     }
 }

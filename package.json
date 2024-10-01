@@ -2,9 +2,11 @@
   "name": "hardhat-project",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@types/node": "^22.7.4",
     "hardhat": "^2.22.12"
   },
   "dependencies": {
-    "@chainlink/contracts": "^0.6.1"
+    "@chainlink/contracts": "^0.6.1",
+    "bignumber.js": "^9.1.2"
   }
 }
