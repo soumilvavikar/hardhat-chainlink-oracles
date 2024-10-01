@@ -1,4 +1,4 @@
-# COnnecting to the Oracles using Hardhat
+# Connecting to the Oracles using Hardhat
 
 ## Setting up a new Hardhat Project
 
