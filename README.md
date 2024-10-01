@@ -25,7 +25,7 @@ npm i @chainlink/contracts
 
 ## Write the Contract
 
-Refer to `PriceConsumer.sol`, `MOckAggregatorV3.sol`, and `OracleTest.js`.
+Refer to `PriceConsumer.sol`, `MockAggregatorV3.sol`, and `PriceConsumerV3Test.js`.
 
 ## Build and Unit Test the Smart Contract
 
